@@ -4,8 +4,6 @@ public:
         int n=nums.size();
         long long a=*max_element(nums.begin(),nums.end());
         long long b=*min_element(nums.begin(),nums.end());
-        long long c=a-b;
-        long long ans = c*k;
-        return ans;
+        return (a-b)*k;
     }
 };
