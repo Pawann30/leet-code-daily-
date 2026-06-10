@@ -7,7 +7,7 @@ public:
         int Max=INT_MIN;
         int i=0;
         while(i<n){
-            if(nums[i]==0){
+            /*if(nums[i]==0){
                 count++;
                 i++;
             }else{
@@ -21,7 +21,19 @@ public:
             }
         }
         Max = max(Max, i - j);
-        return Max;
+        return Max;*/
+        if(nums[i] == 0)
+            count++;
 
+        while(count > k){
+            if(nums[j] == 0)
+                count--;
+            j++;
+        }
+
+        Max = max(Max, i - j + 1);
+        i++;
+        }
+        return Max;
     }
 };
