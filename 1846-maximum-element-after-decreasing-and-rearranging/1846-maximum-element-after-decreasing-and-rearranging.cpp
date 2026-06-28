@@ -4,16 +4,6 @@ public:
         sort(arr.begin(),arr.end());
         int n = arr.size();
         if(arr[0]!=1){
-            int temp = arr[0];
-            for(int i=1;i<n;i++){
-                if(arr[i]==1){
-                    arr[0]=1;
-                    arr[i]=temp;
-                    break;
-                }
-            }
-        }
-        if(arr[0]!=1){
             arr[0]=1;
         }
         int i=0;
