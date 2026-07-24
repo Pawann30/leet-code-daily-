@@ -17,12 +17,12 @@ public:
             return ans;
         }
         for(int i=0; i<n; i++){
-            freq[p[i]-'a']++;
+            freq[p[i]-'a']--;
             //freq2[p[i]-'a']++;
         }
         
         for(int i =0 ;i<n;i++ ){
-            freq[s[i]-'a']--;
+            freq[s[i]-'a']++;
 
         }
         int i = n;
@@ -32,9 +32,9 @@ public:
                 ans.push_back(i-n);
                 //i++;
             }
-                freq[s[i-n]-'a']++;
+                freq[s[i-n]-'a']--;
                 
-                freq[s[i]-'a']--;
+                freq[s[i]-'a']++;
                 i++;
         
         }
