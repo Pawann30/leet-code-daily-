@@ -13,7 +13,6 @@ public:
             if(nums2[i]==st.top()){
                 st.pop();
                 bool found = false;
-
                 for(int j = i + 1; j < m; j++){
                     if(nums2[j] > nums2[i]){
                         ans.push_back(nums2[j]);
