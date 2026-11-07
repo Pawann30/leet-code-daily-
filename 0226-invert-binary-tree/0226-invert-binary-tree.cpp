@@ -11,8 +11,15 @@
  */
 class Solution {
 public:
+    void solve(TreeNode* root){
+        if(root == NULL) return;
+        swap(root->left ,root->right);
+        solve(root->left);
+        solve(root->right);
+
+    }
     TreeNode* invertTree(TreeNode* root) {
-        if(root == NULL ){
+       /* if(root == NULL ){
             return root;
         }
         stack<TreeNode*> st;
@@ -28,6 +35,14 @@ public:
                 st.push(node->right);
             }
         }
+        return root;*/
+
+        if(root == NULL){
+            return root;
+        }
+       // TreeNode* root1 = root->left;
+        //TreeNode* root2 = root->right;
+        solve(root);
         return root;
     }
 };
